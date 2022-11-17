@@ -6,6 +6,7 @@
   - [Status quo](#status-quo)
     - [Who is DRI here?](#who-is-dri-here)
     - [How can software assist?](#how-can-software-assist)
+    - [Some interesting stats](#some-interesting-stats)
     - [Are screen readers a silver bullet?](#are-screen-readers-a-silver-bullet)
 - [Use case: measurements](#use-case-measurements)
   - [The problem](#the-problem)
@@ -14,7 +15,6 @@
     - [Let’s add some React to it](#lets-add-some-react-to-it)
 - [References](#references)
 
-<br/>
 
 # Introduction
 
@@ -55,11 +55,22 @@ As of the time of writing, both Google Chrome and Microsoft Edge ship with a scr
 
 Firefox on the other hand, does not ship with a screen reader by default. However, it provides basic support for VoiceOver on Apple platforms and does link to several add-ons users can install on any platform.
 
+### Some interesting stats
+
+I came across the [screen reader survey #8 by Web AIM (Accessibility in mind)](https://webaim.org/projects/screenreadersurvey8/), which provides a nice overview on some topics from a screen reader user perspective. It's worth a read, and you can even compare how these results have evolved over time. What I believe it's important to take from these results, is the reasons the interviewees believe accessibility in the web is lagging behind. Lack of awareness is the most voted reason, which is something that we can fix overtime. It's important to note how critical can be having a good level of accessibility for a human being, either if it's for work or for browsing Reddit at 3:00 in the morning.
+
+| Reason                          | Percentage |
+| ------------------------------- | ---------- |
+| Lack of awareness               | 38 %       |
+| Lack of skills                  | 34%        |
+| Fear of hindering the feature   | 18%        |
+| Lack of budger                  | 9%         |
+
 ### Are screen readers a silver bullet?
 
 Any piece of software is made by humans. Therefore, no software is bullet proof. One can navigate through WebKit’s BugZilla, filtering by `VoiceOver` or going to Chromium’s site and doing the same.
 
-![WebKit’s list of screen reader related issues. ](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4ac590fd-d3f9-4cb8-b48b-a31a503c3638/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221114%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221114T221139Z&X-Amz-Expires=86400&X-Amz-Signature=dcf6ee3661ad62a202a3f7180bb7069faa352085f33de66e88f08813cdbd68ef&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
+![WebKit’s list of screen reader related issues.](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4ac590fd-d3f9-4cb8-b48b-a31a503c3638/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221114%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221114T221139Z&X-Amz-Expires=86400&X-Amz-Signature=dcf6ee3661ad62a202a3f7180bb7069faa352085f33de66e88f08813cdbd68ef&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
 
 WebKit’s list of screen reader related issues. 
 
@@ -200,4 +211,5 @@ export default function Amount({ children, unit }: PropsWithChildren<Props>) {
 - Introduction to Web Accessibility ⬥ [W3C](https://www.w3.org/WAI/fundamentals/accessibility-intro/)
 - Screen readers ⬥  [American Foundation for the Blind](https://www.afb.org/blindness-and-low-vision/using-technology/assistive-technology-products/screen-readers)
 - Compatibility With Assistive Technologies ⬥ [Mozilla](https://support.mozilla.org/en-US/kb/accessibility-features-firefox?redirectslug=accessibility-features-firefox-make-firefox-and-we&redirectlocale=en-US#w_screen-reader)
-- Accessibility features in Microsoft Edge ⬥ Microsoft
+- Accessibility features in Microsoft Edge ⬥ [Microsoft](https://support.microsoft.com/en-us/microsoft-edge/accessibility-features-in-microsoft-edge-4c696192-338e-9465-b2cd-bd9b698ad19a)
+- Screen reader survey #8 ⬥ [Web AIM](https://webaim.org/projects/screenreadersurvey8/)
